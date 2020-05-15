@@ -14,14 +14,14 @@
 
   <body>
     <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
-      <a class="navbar-brand">3Design</a>
+      <span class="navbar-brand">3Design</span>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <a class="navbar-toggler-icon"></a>
       </button>
       <div class="collapse navbar-collapse" id="mobile-menu">
         <ul class="navbar-nav">
           <li class="dropdown">
-            <a href=# class="nav-link dropdown-toggle" data-toggle="dropdown">print</a>
+            <a href=# class="nav-link dropdown-toggle" data-toggle="dropdown">3D print</a>
             <div class="dropdown-menu">
               <a href=# class="dropdown-item">art</a>
               <a href=# class="dropdown-item">mechanic</a>
@@ -30,8 +30,8 @@
             </div>
           </li>
             <li><a href=# class="nav-link">technical draw</a></li>
-            <li><a href=# class="nav-link">project help</a></li>
-            <li><a href=# class="nav-link">contact</a></li>
+            <li><a href=# class="nav-link">project support</a></li>
+            <li><a href=# class="nav-link">contact us</a></li>
         </ul>
         <div class="btn-group ml-auto" role="group" aria-label="Basic example">
           <button type="button" class="btn btn-dark"><i class="fas fa-shopping-cart"></i><a> Cart</a></button>
@@ -46,8 +46,8 @@
           <img class="w-100" src="https://i.postimg.cc/63dt2v1H/geometric-decoration-5836-1.jpg" alt="image">
             <div class="carousel-caption">
               <h3>3D print</h3>
-              <h4>art, deco, mechanics, toys</h4>
-              <a href=# class="btn btn-warning">and more</a>
+              <h4>art, mechanics, toys</h4>
+              <a href="#products" class="btn btn-warning">and more</a>
             </div>
         </div>
         <div class="carousel-item photo-two">
@@ -77,17 +77,97 @@
       </a>
     </div>
 
-    <section class="products py-5">
+    <section class="products py-5" id="products">
       <div class="container">
         <div class="row">
           <div class="col-lg-3">
             <h2>Projects</h2>
-            <div class="list-group flex-columne flex-md-row flex-lg-column">
-              <a class="border-bottom rounded-bottom p-2 list-group list-group=item">Utilities</a>
-              <a class="border-bottom rounded-bottom p-2 list-group list-group=item">ArtDeco</a>
-              <a class="border-bottom rounded-bottom p-2 list-group list-group=item">Architecture</a>
-              <a class="border-bottom rounded-bottom p-2 list-group list-group=item">Toys</a>
-              <a class="border-bottom rounded-bottom p-2 list-group list-group=item">Mechanics</a>
+            <div class="list-group flex-column flex-md-row flex-lg-column">
+              <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#ScientificModels">ScientificModels</button>
+              <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#StylishFaucets">StylishFaucets</button>
+              <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#StrawberryFields">StrawberryFields</button>
+              <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#CheaperToys">CheaperToys</button>
+              <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#ElectronicalBoard">ElectronicalBoard</button>
+            </div>
+            <div class="modal fade bd-example-modal-lg" id="ScientificModels" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="ScientificModels" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="card bg-dark text-white">
+                      <img class="card-img" src="./images/skull.png" alt="skull">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Scientific 3D models for Medical University</h5>
+                        <p class="card-text">made in 2019 for a student of Medicinal University of Szczecin</br>project involves printing in 3D technology<br /> scientific objects needed in PhD thesis</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade bd-example-modal-lg" id="StylishFaucets" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="StylishFaucets" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="card bg-dark text-white">
+                      <img class="card-img" src="./images/faucet.png" alt="faucet">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Technical drawings of stylish faucets</h5>
+                        <p class="card-text">made in 2020 for an international sales company</br>project involves making technical drawings<br /> for over 100 of faucets</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade bd-example-modal-lg" id="StrawberryFields" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="StrawberryFields" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="card bg-dark text-white">
+                      <img class="card-img" src="./images/strawberry.png" alt="strawberries">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Automation of hydroponics plantation of strawberries</h5>
+                        <p class="card-text">started in 2019 still in progress<br />project involves automation of watering depending on weather forecast</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade bd-example-modal-lg" id="CheaperToys" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="CheaperToys" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="card bg-dark text-black">
+                      <img class="card-img" src="./images/toys.png" alt="toys">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Projects and 3D printing of toys</h5>
+                        <p class="card-text">made in 2019 project involves finding a way<br />to make selected toys cheaper in production</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade bd-example-modal-lg" id="ElectronicalBoard" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="ElectronicalBoard" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="card bg-dark text-white">
+                      <img class="card-img" src="./images/electronics.png" alt="electronics">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Mobile, waterproof measuring system</h5>
+                        <p class="card-text">made in 2018 project involves making a project<br />and constructing a PCB for BEng thesis</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-9">
@@ -297,5 +377,6 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   </body>
 </html>
