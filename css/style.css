@@ -8,7 +8,7 @@ body, html {
   scroll-behavior: smooth;
 }
 
-.carousel-inner .carousel-item {
+#main-slider .carousel-item {
   height: 100vh;
 }
 
@@ -80,5 +80,35 @@ body, html {
 
 .footer {
   background-color: darkgrey;
+}
+
+.products {
+  height: 100vh;
+}
+
+ol.carousel-indicators {
+  position: relative;
+  bottom: 0;
+  margin: auto;
+  width: 50px;
+}
+
+ol.carousel-indicators li {
+  float: left;
+  width: 33%;
+  height: 10px;
+  margin: 1px;
+  border-radius: 0;
+  border: 0;
+  background: lightgrey;
+  border-radius: 30%;
+}
+
+ol.carousel-indicators li.active {
+  background: grey;
+}
+
+.card {
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */
