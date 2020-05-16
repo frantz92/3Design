@@ -9,6 +9,7 @@ body,
 html {
   font-family: 'Roboto Condensed', sans-serif;
   scroll-behavior: smooth;
+  text-align: center;
 }
 
 #main-slider .carousel-item {
@@ -58,29 +59,39 @@ html {
 
 .contact .social-media li {
   display: inline-block;
-  margin: 0 5px 0 0;
+  margin: 0 5px;
 }
 
-.contact .social-media i {
+.contact .card-body a {
   display: flex;
-  font-size: 16px;
+  font-size: 20px;
   background: inherit;
   color: black;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  transition: 0.5s;
+  margin: 5px 0;
+}
+
+.contact .card-body a:hover {
+  transform: scale(1.5);
+  color: lightblue;
 }
 
 .footer {
   background-color: darkgrey;
+  text-align: left;
 }
 
 .products {
   height: 100vh;
-  background-color: #b8d3d2;
+  background-color: #eff2f5;
 }
 
 .news {
   height: 100vh;
+  background-color: darkgrey;
 }
 
 ol.carousel-indicators {
@@ -133,4 +144,33 @@ ol.carousel-indicators li.active {
   text-align: center;
   bottom: 0;
   top: auto;
+}
+
+.news-card {
+  background-color: transparent;
+  text-align: center;
+  color: #eff2f5;
+}
+
+.projects-modals {
+  text-align: left;
+}
+
+.project-button {
+  border: none;
+  transition: 1s;
+}
+
+.project-button:hover {
+  color: lightblue;
+
+  transform: scale(1.5);
+}
+
+.project-button:focus {
+  outline: none;
+}
+
+.products .card {
+  background: transparent;
 }

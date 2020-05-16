@@ -55,7 +55,7 @@
             <div class="carousel-caption">
               <h3>Project support</h3>
               <h4>automation, mechanics, electronics, programming</h4>
-              <a href=href="#products" class="btn btn-light">and more</a>
+              <a href="#products" class="btn btn-light">and more</a>
             </div>
           </div>
         </div>
@@ -75,11 +75,11 @@
           <div class="col-lg-3">
             <h2>Projects</h2>
             <div class="projects-list list-group flex-column flex-md-row flex-lg-column">
-              <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#ScientificModels">ScientificModels</button>
-              <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#StylishFaucets">StylishFaucets</button>
-              <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#StrawberryFields">StrawberryFields</button>
-              <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#CheaperToys">CheaperToys</button>
-              <button type="button" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#ElectronicalBoard">ElectronicalBoard</button>
+              <button type="button" class="project-button list-group-item list-group-item-action bg-transparent" data-toggle="modal" data-target="#ScientificModels">ScientificModels</button>
+              <button type="button" class="project-button list-group-item list-group-item-action bg-transparent" data-toggle="modal" data-target="#StylishFaucets">StylishFaucets</button>
+              <button type="button" class="project-button list-group-item list-group-item-action bg-transparent" data-toggle="modal" data-target="#StrawberryFields">StrawberryFields</button>
+              <button type="button" class="project-button list-group-item list-group-item-action bg-transparent" data-toggle="modal" data-target="#CheaperToys">CheaperToys</button>
+              <button type="button" class="project-button list-group-item list-group-item-action bg-transparent" data-toggle="modal" data-target="#ElectronicalBoard">ElectronicalBoard</button>
             </div>
             <div class="projects-modals">
               <div class="modal fade bd-example-modal-lg" id="ScientificModels" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="ScientificModels" aria-hidden="true">
@@ -352,12 +352,10 @@
         </div>
         <div class="row">
           <div class="col-12 col-md-4">
-            <div class="card p-3 mb-3">
+            <div class="card p-3 mb-3 news-card">
               <div class="row">
-                <div class="col-md-2 d-md-block">
+                <div class="card-body col-md-12">
                   <i class="fas fa-truck pt-4 pl-3"></i>
-                </div>
-                <div class="card-body col-md-10">
                   <h3>Free shipping</h3>
                   <p>over 100$ order.</p>
                 </div>
@@ -365,12 +363,10 @@
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="card p-3 mb-3">
+            <div class="card p-3 mb-3 news-card">
               <div class="row">
-                <div class="col-md-2 d-md-block">
+                <div class="card-body col-md-12">
                   <i class="fas fa-money-bill-wave pt-4 pl-3"></i>
-                </div>
-                <div class="card-body col-md-10">
                   <h3>60-day refund</h3>
                   <p>without question asked.</p>
                 </div>
@@ -378,12 +374,10 @@
             </div>
           </div>
           <div class="col-12 col-md-4">
-            <div class="card p-3 mb-3">
+            <div class="card p-3 mb-3 news-card">
               <div class="row">
-                <div class="col-md-2 d-md-block">
+                <div class="card-body col-md-20">
                   <i class="far fa-life-ring pt-4 pl-3"></i>
-                </div>
-                <div class="card-body col-md-10">
                   <h3>24/7 Support</h3>
                   <p>via e-mail or phone.</p>
                 </div>
@@ -480,14 +474,18 @@
             <div class="card px-lg-5 mb-3 border-0">
               <div class="card-body">
                 <h3>Newsletter</h3>
-                <p>Some quick example text.</p>
-                <form>
+                <p>Stay up to date!<br />Subscribe to our newsletter!</p>
+                <form class="was-validated">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <input type="email" class="form-control" id="project-form-email" placeholder="your.email@address.com" required>
+                    <div class="invalid-feedback">
+                      Please enter Your valid e-mail address.
+                    </div>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button class="submit-btn btn btn-light nav-link" type="submit">Subscribe</button>
                 </form>
               </div>
             </div>
@@ -495,13 +493,15 @@
           <div class="col-12 col-md-4 order-0 order-md-1">
             <div class="card px-lg-5 mb-3 border-0">
               <div class="card-body">
-                <h3>HARBINGER</h3>
-                <p>Some quick example text. A little bit more to add another line of text.</p>
+                <h3>3Design Co.</h3>
+                <p>Small business<br />with ideas<br />that become real</p>
+                <br />
+                <p>find us on:</p>
                 <ul class="social-media">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                  <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -510,9 +510,10 @@
             <div class="card px-lg-5 mb-3 border-0">
               <div class="card-body">
                 <h3>Contact Us</h3>
-                <p>321 Long Street</p>
-                <p>12345 Cropston, Michigan</p>
-                <a href="#" class="card-link">support@3design.com</a>
+                <p>31 Spooner Street</p>
+                <p>00093 Quahog, Rhode Island</p>               
+                <a href="mailto:support@3design.com" class="card-link"><i class="fas fa-paper-plane"></i>support@3design.com</a>
+                <a href="tel:01-311-999" class="card-link"><i class="fas fa-phone"></i>01-311-999</a>
               </div>
             </div>
           </div>
@@ -520,25 +521,24 @@
       </div>
     </section>
 
-    <section class="footer py-3">
+    <section class="footer py-3" id="footer">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-4 ml-auto">
+          <div class="col-12 col-md-4">
             <p>&copy; 2020 3Design</p>
           </div>
-          <div class="col-12 col-md-6 mr-auto">
-            <button type="button" class="btn btn-link">About</button>
-            <button type="button" class="btn btn-link">Delivery</button>
-            <button type="button" class="btn btn-link">Returns</button>
-            <button type="button" class="btn btn-link">Privacy Policy</button>
-            <button type="button" class="btn btn-link">Terms & Conditions</button>
-          </div>
-        </div>
       </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+   
+   <!-- Preventing the default move to the top of the page after click submit button -->
+   <script>
+    $("form").on('submit',function(e){
+      e.preventDefault();
+      });
+    </script>
+    
   </body>
 </html>
