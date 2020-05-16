@@ -1,86 +1,85 @@
 /* Global */
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-body, html {
-    font-family: 'Roboto Condensed', sans-serif;
-    scroll-behavior: smooth;
+body,
+html {
+  font-family: 'Roboto Condensed', sans-serif;
+  scroll-behavior: smooth;
 }
 
 #main-slider .carousel-item {
-    height: 100vh;
+  height: 100vh;
 }
 
 .carousel-item img {
-    height: 100%;
-    object-fit: cover;
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-caption {
-    position: absolute;
-    right: auto;
-    bottom: auto;
-    left: 50%;
-    top: 85%;
-    transform: translate(-50%, -50%)
+  position: absolute;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
 }
 
 .carousel-inner .photo-one .carousel-caption {
-    color: black;
+  color: black;
 }
 
 .carousel-inner .photo-three .carousel-caption {
-    color: black;
+  color: black;
 }
 
 .card-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .contact {
-    background-color: #eff2f5;
+  background-color: #eff2f5;
 }
 
 .contact .card {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .contact .social-media {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .contact .social-media li {
-    display: inline-block;
-    margin: 0 5px 0 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
 }
 
 .contact .social-media i {
-    display: flex;
-    font-size: 16px;
-    background: inherit;
-    color: black;
-    justify-content: center;
-    align-items: center;
-}
-
-.news .card-body {
-    right: auto;
-    bottom: auto;
-    left: 50%;
-    top: 85%;
-    transform: translate(-50%, -50%)
+  display: flex;
+  font-size: 16px;
+  background: inherit;
+  color: black;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
-    background-color: darkgrey;
+  background-color: darkgrey;
 }
 
-
 .products {
+  height: 100vh;
+  background-color: #b8d3d2;
+}
+
+.news {
   height: 100vh;
 }
 
@@ -91,15 +90,14 @@ ol.carousel-indicators {
   width: 50px;
 }
 
-ol.carousel-indicators li,
- {
+ol.carousel-indicators li {
   float: left;
   width: 33%;
   height: 10px;
   margin: 1px;
   border-radius: 0;
   border: 0;
-  background: lightgrey;
+  background: white;
   border-radius: 30%;
 }
 
@@ -109,4 +107,30 @@ ol.carousel-indicators li.active {
 
 .card {
   border: none;
+}
+
+.project-form .custom-file-label {
+  text-align: left;
+}
+
+.submit-btn {
+  margin: 20px 0;
+  width: 100%;
+  transition: 1.5s;
+}
+
+.submit-btn:focus {
+  color: white;
+  background-color: green;
+}
+
+.project-form {
+  position: relative;
+  text-align: center;
+}
+
+.news-image-description {
+  text-align: center;
+  bottom: 0;
+  top: auto;
 }
