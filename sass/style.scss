@@ -44,6 +44,10 @@ html {
   object-fit: cover;
 }
 
+.card-img {
+  object-fit: cover;
+}
+
 .contact {
   background-color: #eff2f5;
 }
@@ -85,12 +89,10 @@ html {
 }
 
 .products {
-  height: 100vh;
   background-color: #eff2f5;
 }
 
 .news {
-  height: 100vh;
   background-color: darkgrey;
 }
 
@@ -124,6 +126,11 @@ ol.carousel-indicators li.active {
   text-align: left;
 }
 
+.btn {
+  background-color: transparent;
+  border-color: gray;
+}
+
 .submit-btn {
   margin: 20px 0;
   width: 100%;
@@ -131,8 +138,8 @@ ol.carousel-indicators li.active {
 }
 
 .submit-btn:focus {
-  color: white;
-  background-color: green;
+  color: green;
+  border-color: green;
 }
 
 .project-form {
@@ -173,4 +180,12 @@ ol.carousel-indicators li.active {
 
 .products .card {
   background: transparent;
+}
+
+.account-form {
+  height: 100px;
+}
+
+.modal-body {
+  min-height: 420px;
 }

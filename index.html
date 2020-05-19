@@ -2,151 +2,253 @@
 
 <html lang="en">
 
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Project: Shop</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Project: Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
 
-  <body>
+<body>
+  <div class="page-navigation">
     <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
-        <span class="navbar-brand">3Design</span>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
-          <a class="navbar-toggler-icon"></a>
-        </button>
-        <div class="collapse navbar-collapse" id="mobile-menu">
-          <ul class="navbar-nav">
-            <li><a href="#products" class="nav-link">3D print</a></li>
-            <li><a href="#products" class="nav-link">technical draw</a></li>
-            <li><a href="#products" class="nav-link">project support</a></li>
-            <li><a href="#contact" class="nav-link">contact us</a></li>
-          </ul>
-          <div class="btn-group ml-auto" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-dark"><i class="fas fa-shopping-cart"></i><a> Cart</a></button>
-            <button type="button" class="btn btn-dark"><i class="fas fa-user"></i><a> Account</a></button>
-          </div>
+      <span class="navbar-brand">3Design</span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-menu"
+        aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-toggler-icon"></a>
+      </button>
+      <div class="collapse navbar-collapse" id="mobile-menu">
+        <ul class="navbar-nav">
+          <li><a href="#products" class="nav-link">3D print</a></li>
+          <li><a href="#products" class="nav-link">technical draw</a></li>
+          <li><a href="#products" class="nav-link">project support</a></li>
+          <li><a href="#contact" class="nav-link">contact us</a></li>
+        </ul>
+        <div class="btn-group ml-auto" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-light"><i class="fas fa-shopping-cart"></i><a> Cart</a></button>
+          <button type="button" class="btn btn-light" data-toggle="modal" data-target="#Account">
+            <i class="fas fa-user"></i>
+            Account
+          </button>
         </div>
+      </div>
     </nav>
-
-    <div id="main-slider" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active photo-one">
-            <img class="w-100" src="https://i.postimg.cc/63dt2v1H/geometric-decoration-5836-1.jpg" alt="image">
-            <div class="carousel-caption">
-              <h3>3D print</h3>
-              <h4>art, mechanics, toys</h4>
-              <a href="#products" class="btn btn-warning">and more</a>
+    <div class="modal fade bd-example-modal" id="Account" data-backdrop="static" data-keyboard="false" tabindex="-1"
+      role="dialog" aria-labelledby="Account" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="card bg-light text-dark">
+              <img class="card-img" src="./images/account-form.png" alt="account-form">
+              <div class="card-img-overlay col-6">
+                <form class="was-validated project-form">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="account-form-login" placeholder="login" required>
+                    <div class="invalid-feedback">
+                      Please enter Your account login
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="account-form-password" placeholder="password"
+                      required>
+                    <div class="invalid-feedback">
+                      Please enter Your account password
+                    </div>
+                  </div>
+                  <button class="submit-btn btn btn-light my-0" type="submit">Log In</button>
+                  <p>or</p>
+                  <button class="submit-btn btn btn-light mt-0" type="button" data-toggle="modal" data-dismiss="modal"
+                    data-target="#Signup">Sign Up</button>
+                </form>
+              </div>
             </div>
           </div>
-          <div class="carousel-item photo-two">
-            <img class="w-100" src="https://i.postimg.cc/TPdrHVnb/white-lines-2230796-1.jpg" alt="image">
-            <div class="carousel-caption">
-              <h3>Technical draw</h3>
-              <h4>modeling, architecture, mechanics</h4>
-              <a href="#products" class="btn btn-dark">and more</a>
-            </div>
-          </div>
-          <div class="carousel-item photo-three">
-            <img class="w-100" src="https://i.postimg.cc/Pq8XxszM/white-modern-art-ceiling-774548-1.jpg" alt="image">
-            <div class="carousel-caption">
-              <h3>Project support</h3>
-              <h4>automation, mechanics, electronics, programming</h4>
-              <a href="#products" class="btn btn-light">and more</a>
-            </div>
-          </div>
+          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
         </div>
-        <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#main-slider" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+      </div>
     </div>
-
-    <section class="products py-5" id="products">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <h2>Projects</h2>
-            <div class="projects-list list-group flex-column flex-md-row flex-lg-column">
-              <button type="button" class="project-button list-group-item list-group-item-action bg-transparent" data-toggle="modal" data-target="#ScientificModels">ScientificModels</button>
-              <button type="button" class="project-button list-group-item list-group-item-action bg-transparent" data-toggle="modal" data-target="#StylishFaucets">StylishFaucets</button>
-              <button type="button" class="project-button list-group-item list-group-item-action bg-transparent" data-toggle="modal" data-target="#StrawberryFields">StrawberryFields</button>
-              <button type="button" class="project-button list-group-item list-group-item-action bg-transparent" data-toggle="modal" data-target="#CheaperToys">CheaperToys</button>
-              <button type="button" class="project-button list-group-item list-group-item-action bg-transparent" data-toggle="modal" data-target="#ElectronicalBoard">ElectronicalBoard</button>
+    <div class="modal fade bd-example-modal" id="Signup" data-backdrop="static" data-keyboard="false" tabindex="-1"
+      role="dialog" aria-labelledby="Signup" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="card bg-light text-dark">
+              <img class="card-img" src="./images/account-form.png" alt="account-form">
+              <div class="card-img-overlay col-12 col-lg-6">
+                <form class="was-validated project-form">
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="signup-form-email" placeholder="your.email@address.com"
+                      required>
+                    <div class="invalid-feedback">
+                      Please enter Your e-mail address
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="signup-form-login" placeholder="login" required>
+                    <div class="invalid-feedback">
+                      Please enter Your account login
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="signup-form-password" placeholder="password"
+                      required>
+                    <div class="invalid-feedback">
+                      Please enter Your account password
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="signup-form-conf-password" placeholder="password"
+                      required>
+                    <div class="invalid-feedback">
+                      Please confirm Your account password
+                    </div>
+                  </div>
+                  <button class="submit-btn btn btn-light" type="submit">Create Account</button>
+                </form>
+              </div>
             </div>
-            <div class="projects-modals">
-              <div class="modal fade bd-example-modal-lg" id="ScientificModels" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="ScientificModels" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <div class="card bg-dark text-white">
-                        <img class="card-img" src="./images/skull.png" alt="skull">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title">Scientific 3D models for Medical University</h5>
-                          <p class="card-text">made in 2019 for a student of Medicinal University of Szczecin</br>project involves printing in 3D technology<br /> scientific objects needed in PhD thesis</p>
-                        </div>
+          </div>
+          <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="main-slider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active photo-one">
+        <img class="w-100" src="./images/carousel_3d.png" alt="carousel_3d">
+        <div class="carousel-caption w-100">
+          <h3>3D print</h3>
+          <h4>art, mechanics, toys</h4>
+          <a href="#products" class="btn btn-warning">and more</a>
+        </div>
+      </div>
+      <div class="carousel-item photo-two">
+        <img class="w-100" src="./images/carousel_draw.png" alt="carousel_draw">
+        <div class="carousel-caption w-100">
+          <h3>Technical draw</h3>
+          <h4>modeling, architecture, mechanics</h4>
+          <a href="#products" class="btn btn-dark">and more</a>
+        </div>
+      </div>
+      <div class="carousel-item photo-three">
+        <img class="w-100" src="./images/carousel_project.png" alt="carousel_project">
+        <div class="carousel-caption w-100">
+          <h3>Project support</h3>
+          <h4>automation, electronics, programming</h4>
+          <a href="#products" class="btn btn-light">and more</a>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#main-slider" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <section class="products py-5" id="products">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 px-0 md-px-2">
+          <h2>Projects</h2>
+          <div class="projects-list list-group flex-row flex-lg-column">
+            <button type="button" class="project-button list-group-item list-group-item-action bg-transparent px-1"
+              data-toggle="modal" data-target="#ScientificModels">ScientificModels</button>
+            <button type="button" class="project-button list-group-item list-group-item-action bg-transparent px-1"
+              data-toggle="modal" data-target="#StylishFaucets">StylishFaucets</button>
+            <button type="button" class="project-button list-group-item list-group-item-action bg-transparent px-1"
+              data-toggle="modal" data-target="#StrawberryFields">StrawberryFields</button>
+            <button type="button"
+              class="project-button list-group-item list-group-item-action bg-transparent px-1 d-none d-md-block"
+              data-toggle="modal" data-target="#CheaperToys">CheaperToys</button>
+            <button type="button"
+              class="project-button list-group-item list-group-item-action bg-transparent px-1 d-none d-md-block"
+              data-toggle="modal" data-target="#ElectronicalBoard">ElectronicalBoard</button>
+          </div>
+          <div class="projects-modals">
+            <div class="modal fade bd-example-modal-lg" id="ScientificModels" data-backdrop="static"
+              data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="ScientificModels" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="card bg-dark text-white">
+                      <img class="card-img" src="./images/skull.png" alt="skull">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Scientific 3D models for Medical University</h5>
+                        <p class="card-text">made in 2019 for a student of Medicinal University of Szczecin</br>project
+                          involves printing in 3D technology<br /> scientific objects needed in PhD thesis</p>
                       </div>
                     </div>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
+                  <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
                 </div>
               </div>
-              <div class="modal fade bd-example-modal-lg" id="StylishFaucets" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="StylishFaucets" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <div class="card bg-dark text-white">
-                        <img class="card-img" src="./images/faucet.png" alt="faucet">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title">Technical drawings of stylish faucets</h5>
-                          <p class="card-text">made in 2020 for an international sales company</br>project involves making technical drawings<br /> for over 100 of faucets</p>
-                        </div>
+            </div>
+            <div class="modal fade bd-example-modal-lg" id="StylishFaucets" data-backdrop="static" data-keyboard="false"
+              tabindex="-1" role="dialog" aria-labelledby="StylishFaucets" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="card bg-dark text-white">
+                      <img class="card-img" src="./images/faucet.png" alt="faucet">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Technical drawings of stylish faucets</h5>
+                        <p class="card-text">made in 2020 for an international sales company</br>project involves making
+                          technical drawings<br /> for over 100 of faucets</p>
                       </div>
                     </div>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
+                  <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
                 </div>
               </div>
-              <div class="modal fade bd-example-modal-lg" id="StrawberryFields" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="StrawberryFields" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <div class="card bg-dark text-white">
-                        <img class="card-img" src="./images/strawberry.png" alt="strawberries">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title">Automation of hydroponics plantation of strawberries</h5>
-                          <p class="card-text">started in 2019 still in progress<br />project involves automation of watering depending on weather forecast</p>
-                        </div>
+            </div>
+            <div class="modal fade bd-example-modal-lg" id="StrawberryFields" data-backdrop="static"
+              data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="StrawberryFields" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="card bg-dark text-white">
+                      <img class="card-img" src="./images/strawberry.png" alt="strawberries">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Automation of hydroponics plantation of strawberries</h5>
+                        <p class="card-text">started in 2019 still in progress<br />project involves automation of
+                          watering depending on weather forecast</p>
                       </div>
                     </div>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
+                  <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
                 </div>
               </div>
-              <div class="modal fade bd-example-modal-lg" id="CheaperToys" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="CheaperToys" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <div class="card bg-dark text-black">
-                        <img class="card-img" src="./images/toys.png" alt="toys">
-                        <div class="card-img-overlay">
-                          <h5 class="card-title">Projects and 3D printing of toys</h5>
-                          <p class="card-text">made in 2019 project involves finding a way<br />to make selected toys cheaper in production</p>
-                        </div>
+            </div>
+            <div class="modal fade bd-example-modal-lg" id="CheaperToys" data-backdrop="static" data-keyboard="false"
+              tabindex="-1" role="dialog" aria-labelledby="CheaperToys" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div class="card bg-dark text-black">
+                      <img class="card-img" src="./images/toys.png" alt="toys">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Projects and 3D printing of toys</h5>
+                        <p class="card-text">made in 2019 project involves finding a way<br />to make selected toys
+                          cheaper in production</p>
                       </div>
                     </div>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
+                  <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
                 </div>
               </div>
-              <div class="modal fade bd-example-modal-lg" id="ElectronicalBoard" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="ElectronicalBoard" aria-hidden="true">
+            </div>
+            <div class="modal fade bd-example-modal-lg" id="ElectronicalBoard" data-backdrop="static"
+              data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="ElectronicalBoard" aria-hidden="true">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                   <div class="modal-body">
@@ -154,391 +256,416 @@
                       <img class="card-img" src="./images/electronics.png" alt="electronics">
                       <div class="card-img-overlay">
                         <h5 class="card-title">Mobile, waterproof measuring system</h5>
-                        <p class="card-text">made in 2018 project involves making a project<br />and constructing a PCB for BEng thesis</p>
+                        <p class="card-text">made in 2018 project involves making a project<br />and constructing a PCB
+                          for BEng thesis</p>
                       </div>
                     </div>
                   </div>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
                 </div>
               </div>
-            </div>
-            </div>
-          </div>
-          <div class="col-lg-9">
-            <h2>Recently made</h2>
-            <div id="product-slider" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row">
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                        <div class="card">
-                          <div class="card-image">
-                            <img src="./images/wooden-dude.png" alt="wooden-dude">
-                          </div>
-                          <div class="card-body">
-                            <h5>WoodenDude<h6>15$</h6></h5>
-                            <a href=# class="btn btn-light">Add to cart</a>
-                          </div>
-                        </div>
-                      </div>
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                        <div class="card">
-                          <div class="card-image">
-                            <img src="./images/spiral-vase.png" alt="spiral-vase">
-                          </div>
-                          <div class="card-body">
-                            <h5>SpiralVase<h6>8$</h6></h5>
-                            <a href=# class="btn btn-light">Add to cart</a>
-                          </div>
-                        </div>
-                      </div>
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                        <div class="card">
-                          <div class="card-image">
-                            <img src="./images/molecule.png" alt="molecule">
-                          </div>
-                          <div class="card-body">
-                            <h5>Molecule<h6>18$</h6></h5>
-                            <a href=# class="btn btn-light">Add to cart</a>
-                          </div>
-                        </div>
-                      </div>
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                      <div class="card">
-                        <div class="card-image">
-                          <img src="./images/spiderbot.png" alt="spiderbot">
-                        </div>
-                        <div class="card-body">
-                          <h5>SpiderRobot<h6>21$</h6></h5>
-                          <a href=# class="btn btn-light">Add to cart</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                        <div class="card">
-                          <div class="card-image">
-                            <img src="./images/hinge.png" alt="hinge">
-                          </div>
-                          <div class="card-body">
-                            <h5>ReDraws<h6>starting at: 25$</h6></h5>
-                            <a href="#contact" class="btn btn-light">Contact us</a>
-                          </div>
-                        </div>
-                      </div>
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                        <div class="card">
-                          <div class="card-image">
-                            <img src="./images/lego.png" alt="lego">
-                          </div>
-                          <div class="card-body">
-                            <h5>StandardDraws<h6>starting at: 40$</h6></h5>
-                            <a href="#contact" class="btn btn-light">Contact us</a>
-                          </div>
-                        </div>
-                      </div>
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                          <div class="card">
-                            <div class="card-image">
-                              <img src="./images/car.png" alt="car">
-                            </div>
-                            <div class="card-body">
-                              <h5>HandDraws<h6>starting at: 120$</h6></h5>
-                              <a href="#contact" class="btn btn-light">Contact us</a>
-                            </div>
-                          </div>
-                        </div>
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                      <div class="card">
-                        <div class="card-image">
-                          <img src="./images/3dmodeling.png" alt="3dmodeling">
-                        </div>
-                        <div class="card-body">
-                          <h5>3DModeling<h6>starting at: 60$</h6></h5>
-                          <a href="#contact" class="btn btn-light">Contact us</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                        <div class="card">
-                          <div class="card-image">
-                            <img src="./images/planning.png" alt="planning">
-                          </div>
-                          <div class="card-body">
-                            <h5>Planning<h6>starting at: 25$</h6></h5>
-                            <a href="#contact" class="btn btn-light">Contact us</a>
-                          </div>
-                        </div>
-                      </div>
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                        <div class="card">
-                          <div class="card-image">
-                            <img src="./images/management.png" alt="management">
-                          </div>
-                          <div class="card-body">
-                            <h5>Menagement<h6>starting at: 50$</h6></h5>
-                            <a href="#contact" class="btn btn-light">Contact us</a>
-                          </div>
-                        </div>
-                      </div>
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                        <div class="card">
-                          <div class="card-image">
-                            <img src="./images/inventing.png" alt="inventing">
-                          </div>
-                          <div class="card-body">
-                            <h5>Inventing<h6>starting at: 100$</h6></h5>
-                            <a href="#contact" class="btn btn-light">Contact us</a>
-                          </div>
-                        </div>
-                      </div>
-                    <div class="col-sm-6 col-lg-3 mb-3 pl-1 pr-1">
-                      <div class="card">
-                        <div class="card-image">
-                          <img src="./images/analyze.png" alt="analyze">
-                        </div>
-                        <div class="card-body">
-                          <h5>DataAnalyze<h6>starting at: 40$</h6></h5>
-                          <a href="#contact" class="btn btn-light">Contact us</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <ol class="carousel-indicators">
-                <li data-target="#product-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#product-slider" data-slide-to="1"></li>
-                <li data-target="#product-slider" data-slide-to="2"></li>
-              </ol>
             </div>
           </div>
         </div>
+        <div class="col-lg-9">
+          <h2>Recently made</h2>
+          <div id="product-slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 col-lg-3 mb pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/wooden-dude.png" alt="wooden-dude">
+                      </div>
+                      <div class="card-body">
+                        <h5>WoodenDude<h6>15$</h6>
+                        </h5>
+                        <a href=# class="btn btn-light">Add to cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-md-block col-md-6 col-lg-3 mb-3 pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/spiral-vase.png" alt="spiral-vase">
+                      </div>
+                      <div class="card-body">
+                        <h5>SpiralVase<h6>8$</h6>
+                        </h5>
+                        <a href=# class="btn btn-light">Add to cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-lg-block col-lg-3 mb-3 pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/molecule.png" alt="molecule">
+                      </div>
+                      <div class="card-body">
+                        <h5>Molecule<h6>18$</h6>
+                        </h5>
+                        <a href=# class="btn btn-light">Add to cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-lg-block col-lg-3 mb-3 pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/spiderbot.png" alt="spiderbot">
+                      </div>
+                      <div class="card-body">
+                        <h5>SpiderRobot<h6>21$</h6>
+                        </h5>
+                        <a href=# class="btn btn-light">Add to cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 col-lg-3 mb pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/hinge.png" alt="hinge">
+                      </div>
+                      <div class="card-body">
+                        <h5>ReDraws<h6>starting at: 25$</h6>
+                        </h5>
+                        <a href="#contact" class="btn btn-light">Contact us</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-md-block col-md-6 col-lg-3 mb-3 pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/lego.png" alt="lego">
+                      </div>
+                      <div class="card-body">
+                        <h5>StandardDraws<h6>starting at: 40$</h6>
+                        </h5>
+                        <a href="#contact" class="btn btn-light">Contact us</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-lg-block col-lg-3 mb-3 pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/car.png" alt="car">
+                      </div>
+                      <div class="card-body">
+                        <h5>HandDraws<h6>starting at: 120$</h6>
+                        </h5>
+                        <a href="#contact" class="btn btn-light">Contact us</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-lg-block col-lg-3 mb-3 pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/3dmodeling.png" alt="3dmodeling">
+                      </div>
+                      <div class="card-body">
+                        <h5>3DModeling<h6>starting at: 60$</h6>
+                        </h5>
+                        <a href="#contact" class="btn btn-light">Contact us</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 col-lg-3 mb pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/planning.png" alt="planning">
+                      </div>
+                      <div class="card-body">
+                        <h5>Planning<h6>starting at: 25$</h6>
+                        </h5>
+                        <a href="#contact" class="btn btn-light">Contact us</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-md-block col-md-6 col-lg-3 mb-3 pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/management.png" alt="management">
+                      </div>
+                      <div class="card-body">
+                        <h5>Menagement<h6>starting at: 50$</h6>
+                        </h5>
+                        <a href="#contact" class="btn btn-light">Contact us</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-lg-block col-lg-3 mb-3 pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/inventing.png" alt="inventing">
+                      </div>
+                      <div class="card-body">
+                        <h5>Inventing<h6>starting at: 100$</h6>
+                        </h5>
+                        <a href="#contact" class="btn btn-light">Contact us</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-none d-lg-block col-lg-3 mb-3 pl-1 pr-1">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="./images/analyze.png" alt="analyze">
+                      </div>
+                      <div class="card-body">
+                        <h5>DataAnalyze<h6>starting at: 40$</h6>
+                        </h5>
+                        <a href="#contact" class="btn btn-light">Contact us</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ol class="carousel-indicators">
+              <li data-target="#product-slider" data-slide-to="0" class="active"></li>
+              <li data-target="#product-slider" data-slide-to="1"></li>
+              <li data-target="#product-slider" data-slide-to="2"></li>
+            </ol>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="news py-5" id="news">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card mb-3">
-              <div class="card-image">
-                <img src="./images/sale.png" alt="sale">
-              </div>
-              <div class="card-img-overlay news-image-description">
-                <h5>Mid season Sales!</h5>
-                <a class="btn btn-light" data-toggle="modal" data-target="#Sales">Check it out!</a>
-              </div>
+  <section class="news py-5" id="news">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-0">
+          <div class="card mb-3">
+            <div class="card-image">
+              <img src="./images/sale.png" alt="sale">
+            </div>
+            <div class="card-img-overlay news-image-description">
+              <h5>Mid season Sales!</h5>
+              <a class="btn btn-light" data-toggle="modal" data-target="#Sales">Check it out!</a>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card mb-3">
-              <div class="card-image">
-                <img src="./images/project.png" alt="project">
-              </div>
-              <div class="card-img-overlay news-image-description">
-                <h5>Make your own project</h5>
-                <a class="btn btn-light" data-toggle="modal" data-target="#Project">Let's start!</a>
+        </div>
+        <div class="col-md-6 mb-0">
+          <div class="card mb-3">
+            <div class="card-image">
+              <img src="./images/project.png" alt="project">
+            </div>
+            <div class="card-img-overlay news-image-description">
+              <h5>Make your own project</h5>
+              <a class="btn btn-light" data-toggle="modal" data-target="#Project">Let's start!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="card mb-3 news-card">
+            <div class="row">
+              <div class="card-body p-0 col-md-12">
+                <i class="fas fa-truck pt-4 pl-3"></i>
+                <h3>Free <small>shipping</small></h3>
+                <p class="d-none d-md-block">over 100$ order.</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <div class="card p-3 mb-3 news-card">
-              <div class="row">
-                <div class="card-body col-md-12">
-                  <i class="fas fa-truck pt-4 pl-3"></i>
-                  <h3>Free shipping</h3>
-                  <p>over 100$ order.</p>
-                </div>
+        <div class="col-4">
+          <div class="card mb-3 news-card">
+            <div class="row">
+              <div class="card-body p-0  col-md-12">
+                <i class="fas fa-money-bill-wave pt-4 pl-3"></i>
+                <h3>60-day <small>refund</small></h3>
+                <p class="d-none d-md-block">without question asked.</p>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <div class="card p-3 mb-3 news-card">
-              <div class="row">
-                <div class="card-body col-md-12">
-                  <i class="fas fa-money-bill-wave pt-4 pl-3"></i>
-                  <h3>60-day refund</h3>
-                  <p>without question asked.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="card p-3 mb-3 news-card">
-              <div class="row">
-                <div class="card-body col-md-20">
-                  <i class="far fa-life-ring pt-4 pl-3"></i>
-                  <h3>24/7 Support</h3>
-                  <p>via e-mail or phone.</p>
-                </div>
+        </div>
+        <div class="col-4">
+          <div class="card mb-3 news-card">
+            <div class="row">
+              <div class="card-body p-0 col-md-12">
+                <i class="far fa-life-ring pt-4 pl-3"></i>
+                <h3>24/7 <small>Support</small></h3>
+                <p class="d-none d-md-block">via e-mail or phone.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="projects-modals">
-        <div class="modal fade bd-example-modal-lg" id="Sales" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="Sales" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-body">
-                <div class="card bg-light text-dark">
-                  <img class="card-img" src="./images/percentage.png" alt="percentage">
-                  <div class="card-img-overlay">
-                    <h5 class="card-title">Mid season SALES!</h5>
-                    <ul>
-                      <li>
-                        <p class="card-text">-15% on price for first 3D print!</p>
-                      </li>
-                      <br />
-                      <li>
-                        <p class="card-text">-40% on price for second 3D print!</p>
-                      </li>
-                      <br />
-                      <li>
-                        <p class="card-text">open an account and subscribe<br /> to our newsletter and get one free 3D print!</p>
-                      </li>
-                      <br />
-                      <li>
-                        <p class="card-text">-50% on price for modeling<br /> if You're ordering a ReDraw package!</p>
-                      </li>
-                    </ul>
-                    
-                  </div>
-                </div>
-              </div>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-        <div class="modal fade bd-example-modal-lg" id="Project" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="Project" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-body">
-                <div class="card bg-light text-dark">
-                  <img class="card-img" src="./images/project-form.png" alt="project-form">
-                  <div class="card-img-overlay col-6">
-                    <form class="was-validated project-form">
-                      <div class="form-group">
-                        <input type="email" class="form-control" id="project-form-email" placeholder="your.email@address.com" required>
-                        <div class="invalid-feedback">
-                          Please enter Your valid e-mail address.
-                        </div>
-                        <div class="valid-feedback">
-                          Looks good!
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <select class="custom-select" id="project-form-topic" required>
-                          <option value="">Choose Your topic</option>
-                          <option value="1">3D Print</option>
-                          <option value="2">Technical Draw</option>
-                          <option value="3">Project Support</option>
-                        </select>
-                        <div class="invalid-feedback">Please choose the topic of Your project</div>
-                      </div>
-                      <div class="form-group">
-                        <textarea class="form-control" id="project-form-description" rows="3" placeholder="Describe Your idea!" required></textarea>
-                        <div class="invalid-feedback">Please write something about Your project</div>
-                      </div>
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile" required>
-                        <label class="custom-file-label" for="customFile">Choose files...</label>
-                        <div class="valid-feedback">File added!</div>
-                      </div>
-                      <button class="submit-btn btn btn-light" type="submit">Send</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
+    <div class="projects-modals">
+      <div class="modal fade bd-example-modal-lg" id="Sales" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        role="dialog" aria-labelledby="Sales" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="card bg-light text-dark">
+                <img class="card-img" src="./images/percentage.png" alt="percentage">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">Mid season SALES!</h5>
+                  <ul>
+                    <li>
+                      <p class="card-text">-15% on price for first 3D print!</p>
+                    </li>
+                    <br />
+                    <li>
+                      <p class="card-text">-40% on price for second 3D print!</p>
+                    </li>
+                    <br />
+                    <li>
+                      <p class="card-text">open an account and subscribe<br /> to our newsletter and get one free 3D
+                        print!</p>
+                    </li>
+                    <br />
+                    <li>
+                      <p class="card-text">-50% on price for modeling<br /> if You're ordering a ReDraw package!</p>
+                    </li>
+                  </ul>
 
-    <section class="contact py-5" id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4 order-2 order-md-0">
-            <div class="card px-lg-5 mb-3 border-0">
-              <div class="card-body">
-                <h3>Newsletter</h3>
-                <p>Stay up to date!<br />Subscribe to our newsletter!</p>
-                <form class="was-validated">
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="project-form-email" placeholder="your.email@address.com" required>
-                    <div class="invalid-feedback">
-                      Please enter Your valid e-mail address.
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade bd-example-modal-lg" id="Project" data-backdrop="static" data-keyboard="false"
+        tabindex="-1" role="dialog" aria-labelledby="Project" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <div class="card bg-light text-dark h-100 w-100 position-absolute">
+                <img class="card-img h-100" src="./images/project-form.png" alt="project-form">
+                <div class="card-img-overlay col-12 col-lg-6">
+                  <form class="was-validated project-form">
+                    <div class="form-group">
+                      <input type="email" class="form-control bg-transparent" id="project-form-email"
+                        placeholder="your.email@address.com" required>
+                      <div class="invalid-feedback">
+                        Please enter Your valid e-mail address.
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
                     </div>
-                    <div class="valid-feedback">
-                      Looks good!
+                    <div class="form-group">
+                      <select class="custom-select bg-transparent" id="project-form-topic" required>
+                        <option value="">Choose Your topic</option>
+                        <option value="1">3D Print</option>
+                        <option value="2">Technical Draw</option>
+                        <option value="3">Project Support</option>
+                      </select>
+                      <div class="invalid-feedback">Please choose the topic of Your project</div>
                     </div>
+                    <div class="form-group">
+                      <textarea class="form-control bg-transparent" id="project-form-description" rows="3"
+                        placeholder="Describe Your idea!" required></textarea>
+                      <div class="invalid-feedback">Please write something about Your project</div>
+                    </div>
+                    <div class="custom-file d-none d-md-block">
+                      <input type="file" class="custom-file-input" id="customFile" required>
+                      <label class="custom-file-label bg-transparent" for="customFile">Choose files...</label>
+                      <div class="valid-feedback">File added!</div>
+                    </div>
+                    <button class="submit-btn btn btn-light bg-transparent" type="submit">Send</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact py-5" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 order-2 order-md-0">
+          <div class="card px-lg-5 mb-3 border-0">
+            <div class="card-body">
+              <h3>Newsletter</h3>
+              <p>Stay up to date!<br />Subscribe to our newsletter!</p>
+              <form class="was-validated">
+                <div class="form-group">
+                  <input type="email" class="form-control bg-transparent" id="contact-form-email"
+                    placeholder="your.email@address.com" required>
+                  <div class="invalid-feedback">
+                    Please enter Your valid e-mail address.
                   </div>
-                  <button class="submit-btn btn btn-light nav-link" type="submit">Subscribe</button>
-                </form>
-              </div>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <button class="submit-btn btn btn-light nav-link" type="submit">Subscribe</button>
+              </form>
             </div>
           </div>
-          <div class="col-12 col-md-4 order-0 order-md-1">
-            <div class="card px-lg-5 mb-3 border-0">
-              <div class="card-body">
-                <h3>3Design Co.</h3>
-                <p>Small business<br />with ideas<br />that become real</p>
-                <br />
-                <p>find us on:</p>
-                <ul class="social-media">
-                  <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
-                  <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                </ul>
-              </div>
+        </div>
+        <div class="col-12 col-md-4 order-0 order-md-1">
+          <div class="card px-lg-5 mb-3 border-0">
+            <div class="card-body">
+              <h3>3Design Co.</h3>
+              <p>Small business<br />with ideas<br />that become real</p>
+              <br />
+              <p>find us on:</p>
+              <ul class="social-media">
+                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+              </ul>
             </div>
           </div>
-          <div class="col-12 col-md-4 order-1 order-md-2">
-            <div class="card px-lg-5 mb-3 border-0">
-              <div class="card-body">
-                <h3>Contact Us</h3>
-                <p>31 Spooner Street</p>
-                <p>00093 Quahog, Rhode Island</p>               
-                <a href="mailto:support@3design.com" class="card-link"><i class="fas fa-paper-plane"></i>support@3design.com</a>
-                <a href="tel:01-311-999" class="card-link"><i class="fas fa-phone"></i>01-311-999</a>
-              </div>
+        </div>
+        <div class="col-12 col-md-4 order-1 order-md-2">
+          <div class="card px-lg-5 mb-3 border-0">
+            <div class="card-body">
+              <h3>Contact Us</h3>
+              <p>31 Spooner Street</p>
+              <p>00093 Quahog, Rhode Island</p>
+              <a href="mailto:support@3design.com" class="card-link"><i
+                  class="fas fa-paper-plane"></i>support@3design.com</a>
+              <a href="tel:01-311-999" class="card-link"><i class="fas fa-phone"></i>01-311-999</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="footer py-3" id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <p>&copy; 2020 3Design</p>
-          </div>
+  <section class="footer py-3" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <p>&copy; 2020 3Design</p>
+        </div>
       </div>
-    </section>
+  </section>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   
-   <!-- Preventing the default move to the top of the page after click submit button -->
-   <script>
-    $("form").on('submit',function(e){
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- Preventing the default move to the top of the page after click submit button -->
+  <script>
+    $("form").on('submit', function (e) {
       e.preventDefault();
-      });
-    </script>
-    
-  </body>
+    });
+  </script>
+
+</body>
+
 </html>
