@@ -191,4 +191,14 @@ ol.carousel-indicators li.active {
 .modal-body {
   min-height: 420px;
 }
+
+.modal .card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.modal .card img {
+  height: 100%;
+}
 /*# sourceMappingURL=style.css.map */
