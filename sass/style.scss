@@ -259,11 +259,6 @@ ol.carousel-indicators li.active {
 .product-name i {
   color: red;
   margin: 0 5px;
-  transition: .3s ease-in-out;
-}
-
-.product-name i:hover {
-  transform: scale(1.3);
 }
 
 .product-name img {
@@ -280,12 +275,13 @@ ol.carousel-indicators li.active {
   width: 20%;
 }
 
-.product-quantity i {
+.product-quantity a {
   color: blue;
-  transition: .3s ease-in-out;
+  text-decoration: none;
 }
 
-.product-quantity i:hover {
+.products-container i:hover {
+  transition: .3s ease-in-out;
   transform: scale(1.3);
 }
 
@@ -294,8 +290,26 @@ ol.carousel-indicators li.active {
 }
 
 .cart-total-container {
-  display: flex;
-  justify-content: flex-end;
   width: 100%;
+  padding: 5px;
+}
+
+.cart-option {
+  font-size: 18px;
+  margin: 0 5px;
+}
+
+.cart-option:nth-child(2) {
+  color: red;
+  float: left;
+}
+
+.cart-option:nth-child(3) {
+  color: lightblue;
+  float: right;
+}
+
+.cart-total-price {
+  float: right;
 }
 
