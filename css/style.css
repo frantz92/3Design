@@ -209,8 +209,6 @@ ol.carousel-indicators li.active {
       align-items: center;
   padding: 10px;
   margin: 10px auto;
-  min-width: 250px;
-  max-width: 650px;
 }
 
 .cart-header {
@@ -323,5 +321,20 @@ ol.carousel-indicators li.active {
 
 .cart-total-price {
   float: right;
+}
+
+@media (max-width: 767px) {
+  .dropdown-menu {
+    position: fixed;
+    top: 33%;
+    left: 10%;
+    margin-top: -50px;
+    margin-left: -100px;
+  }
+  .cart-total-container {
+    position: absolute;
+    width: 50%;
+    left: 150px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

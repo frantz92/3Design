@@ -126,8 +126,8 @@ function displayCart() {
                         <img src="./images/${item.tag}.png">
                         <span>${item.name}</span>
                     </div>
-                    <div class="product-price">$${item.price}.00</div>
-                    <div class="product-quantity">
+                    <div class="product-price d-none d-md-block">$${item.price}.00</div>
+                    <div class="product-quantity d-none d-md-block">
                         <a class="remove-product" id=${item.name}>
                             <i class="fas fa-angle-left"></i>
                         </a>
